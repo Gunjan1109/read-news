@@ -7,16 +7,24 @@ import Image from "next/image";
 import NoImage from "@/app/assets/images/no-image.jpg";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+type Article = {
+    title: string;
+    description: string;
+    urlToImage: string;
+    content: string;
+    url: string;
+}
+
 const Dashboard = () => {
-    const [articles, setArticles] = useState<Array<any>>([]);
+    const [articles, setArticles] = useState<Array<Article>>([]);
     const [totalArticles, setTotalArticles] = useState<number>();
-    const [selectedArticle, setSelectedArticle] = useState({});
+    const [selectedArticle, setSelectedArticle] = useState<Article>({});
 
     const { isLoading, isSuccess, isError, news, fetchNewsData } = useFetchNews();
 
     const [page, setPage] = useState(1);
 
-    const { title, description, urlToImage, content, url } = selectedArticle || {};
+    const { title, description, urlToImage, content, url } = selectedArticle;
 
     useEffect(() => {
         fetchNewsData(page.toString());
