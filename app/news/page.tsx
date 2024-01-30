@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { useFetchNews } from "../hooks/use-fetch-news";
 import Image from "next/image";
