@@ -15,10 +15,12 @@ type Article = {
     url: string;
 }
 
+const defaultArticle: Article = {} as Article;
+
 const Dashboard = () => {
     const [articles, setArticles] = useState<Array<Article>>([]);
     const [totalArticles, setTotalArticles] = useState<number>();
-    const [selectedArticle, setSelectedArticle] = useState<Article>({});
+    const [selectedArticle, setSelectedArticle] = useState<Article>(defaultArticle);
 
     const { isLoading, isSuccess, isError, news, fetchNewsData } = useFetchNews();
 
