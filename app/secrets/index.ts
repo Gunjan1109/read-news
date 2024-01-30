@@ -1,0 +1,1 @@
+export const NEXT_PUBLIC_NEWS_API_KEY: string = process.env.NEXT_PUBLIC_NEWS_API_KEY || "";
