@@ -66,7 +66,7 @@ const Dashboard = () => {
                             borderRadius: '5px',
                           }}>
                             <span>
-                                <Image src={urlToImage || NoImage} alt={urlToImage || NoImage} width={50} height={50} unoptimized/>
+                                <Image src={urlToImage || NoImage} alt={urlToImage || ""} width={50} height={50} unoptimized/>
                             </span>
                             <span>
                                 <span>{title}</span>
@@ -77,7 +77,7 @@ const Dashboard = () => {
                 <div className="col-md-8">
                     <h1>{title}</h1>
                     <h5>{description}</h5>
-                    <Image src={urlToImage} alt={urlToImage || NoImage} width={1000} height={300} unoptimized/>
+                    <Image src={urlToImage} alt={urlToImage || ""} width={1000} height={300} unoptimized/>
                     <div>
                         {content}
                     </div>
